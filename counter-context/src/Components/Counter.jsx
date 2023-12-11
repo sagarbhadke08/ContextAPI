@@ -1,15 +1,17 @@
 import { useContext } from "react";
-import CounterButton from "./CounterButtons.jsx"
-import { counterContext } from "./CounterContext.js";
+import CounterButtons from "./CounterButtons.jsx"
+import { counterContext } from "./CounterContext.jsx";
 
 const Counter = () => {
-// const Counter = ({ count, increment, decrement, reset }) => {
+    // const Counter = ({ count, increment, decrement, reset }) => {
 
-const {count} = useContext(counterContext)
-return (
+    const { count } = useContext(counterContext);
+    
+    
+    return (
         <div>
             <div>{count}</div>
-            <CounterButton  />
+            <CounterButtons />
             {/* <CounterButton increment={increment} decrement={decrement} reset={reset} /> */}
         </div>
     );
