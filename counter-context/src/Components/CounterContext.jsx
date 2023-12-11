@@ -2,7 +2,7 @@ import { useState, createContext, useContext } from "react";
 
 export const counterContext = createContext(null);
 
-export const CounterContext = ({ children }) => {
+export const CounterProvider = ({ children }) => {
   const [count, setCount] = useState(0);
 
   function increment() {
@@ -31,6 +31,7 @@ export const CounterContext = ({ children }) => {
   );
 };
 
-// export const useCounter=()=>{
-//   const context = useContext(counter)
-// }
+export const useCounter = () => {
+  const context = useContext(counterContext);
+  return context;
+}
