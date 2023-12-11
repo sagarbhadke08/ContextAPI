@@ -18,7 +18,10 @@ function App() {
   }
 
   const values = {
-    count, increment, decrement, reset
+    count,
+    increment,
+    decrement,
+    reset
   };
 
   return (
