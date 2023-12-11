@@ -1,4 +1,10 @@
-export default function CounerButton({ increment, decrement, reset }) {
+import { useContext } from "react";
+import { counterContext } from "./CounterContext";
+
+export default function CounterButton() {
+// export default function CounerButton({ increment, decrement, reset }) {
+
+   const{increment, decrement, reset}= useContext(counterContext);
 
     return (
         <div>
